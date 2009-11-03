@@ -1,3 +1,24 @@
 This test should clarify if it is possible to render images of large crowds of people using povray.
 The Method used here is already optimized for memory saving.
 see: http://www.fitzel.ca/dart/crowds/crowds.html
+
+Install povray beta:
+
+mkdir povray-test && cd povray-test
+wget http://www.povray.org/redirect/www.povray.org/beta/source/povray-3.7.0.beta.34.tar.bz2
+tar xvzf povray-3.7.0.beta.34.tar.bz2
+cd povray-3.7.0.beta.34
+wget -c http://downloads.sourceforge.net/project/boost/boost/1.40.0/boost_1_40_0.tar.bz2?use_mirror=mesh
+tar xvjf boost_1_40_0.tar.bz2
+cd boost_1_40_0
+./bootstrap.sh
+./bjam
+cd ..
+export BOOST_ROOT=/root/povray-test/povray-3.7.0.beta.34/boost_1_40_0
+export LD_LIBRARY_PATH=/root/povray-test/povray-3.7.0.beta.34/boost_1_40_0/stage/lib/
+apt-get install libpng12-dev
+apt-get install libjpeg62-dev
+apt-get install libtiff4-dev
+./configure COMPILED_BY="Marko <mdt@wegewerk.com>"
+make
+
