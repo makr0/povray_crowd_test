@@ -1,0 +1,4 @@
+5000 people
+rts18: Trace Time:       0 hours  1 minutes 36 seconds (96.302 seconds)
+                   using 8 thread(s) with 759.722 CPU-seconds total
+
