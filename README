@@ -19,6 +19,6 @@ export LD_LIBRARY_PATH=/root/povray-test/povray-3.7.0.beta.34/boost_1_40_0/stage
 apt-get install libpng12-dev
 apt-get install libjpeg62-dev
 apt-get install libtiff4-dev
-./configure COMPILED_BY="Marko <mdt@wegewerk.com>"
+./configure COMPILED_BY="yourname <your@mail>"
 make
 
